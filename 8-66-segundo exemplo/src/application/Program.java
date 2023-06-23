@@ -21,8 +21,24 @@ public class Program {
 		product.price = sc.nextDouble();
 		System.out.println("- Quantity in stock: ");
 		product.quantity = sc.nextInt();
+				
+		System.out.println(product); //chama o to string automaticamente
 		
-		System.out.println(product.name + ", " + product.price + ", " + product.quantity);
+		System.out.println("Entre com o número de produtos para ser add ao estoque: ");
+		int quantity = sc.nextInt();
+		
+		product.addProducts(quantity);
+		
+		System.out.println(product);
+		
+		System.out.println("Entre com o número de produtos para remover do estoque: ");
+		quantity = sc.nextInt();
+		
+		product.removeProducts(quantity);
+		
+		System.out.println(product);
+
+		sc.close();
 	}
 
 }

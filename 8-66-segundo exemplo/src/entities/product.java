@@ -17,4 +17,8 @@ public class product {
 		this.quantity -= quantity;
 	}
 
+	public String toString() { //sobrescrevendo o toString
+		return name + ", $" + String.format("%.2f", price) + ", " + quantity + " units, total: $" + String.format("%.2f", totalValueInStock());
+	}
+	
 }
