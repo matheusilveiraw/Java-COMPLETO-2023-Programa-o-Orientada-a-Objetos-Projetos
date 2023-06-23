@@ -11,9 +11,7 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Retangulo retangulo;
-		
-		retangulo = new Retangulo();
+		Retangulo retangulo = new Retangulo();
 		
 		System.out.println("Insira o valor da altura e da largura: ");
 		retangulo.altura = sc.nextDouble();

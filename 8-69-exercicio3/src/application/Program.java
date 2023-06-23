@@ -15,9 +15,7 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 
-		Aluno aluno;
-		
-		aluno = new Aluno();
+		Aluno aluno = new Aluno();
 		
 		System.out.println("Digite as notas: ");
 		aluno.nota1 = sc.nextDouble();

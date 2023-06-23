@@ -12,9 +12,7 @@ public class Program {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		empregado empregado; 
-		
-		empregado = new empregado();
+		empregado empregado = new empregado();
 		
 		System.out.println("Digite o nome, o salário bruto e o imposto. ");
 		empregado.nome = sc.next();
