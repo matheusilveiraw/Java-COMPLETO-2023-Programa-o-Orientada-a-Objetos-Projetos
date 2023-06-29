@@ -10,15 +10,19 @@ public class Conta {
 	}
 	
 	public void saque(double value) {
-		this.totalValue = this.totalValue - value - 5;
+		this.totalValue -= value + 5;
 	}
 	
 	
-	public Conta(int accNumber, String accHolder, double totalValue) {
+	public Conta(int accNumber, String accHolder, double initialDeposit) {
 		super();
 		this.accHolder = accHolder;
 		this.accNumber = accNumber;
-		this.totalValue = totalValue;
+		deposito(initialDeposit);//melhor assim para o caso de alguma regra de negócio for alterada
+	}
+	
+	public String toString() { //bem melhor para impressão comparado ao qeu eu tinha feito
+		return "Holder: " + accHolder + ", Acc: "+ accNumber + ",  Balance: R$" + String.format("%.2f", totalValue);
 	}
 
 	//-------------------
@@ -37,9 +41,5 @@ public class Conta {
 
 	public double getTotalValue() {
 		return totalValue;
-	}
-
-	public void setTotalValue(double totalValue) {
-		this.totalValue = totalValue;
 	}
 }

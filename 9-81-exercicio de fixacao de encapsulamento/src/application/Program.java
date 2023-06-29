@@ -25,20 +25,19 @@ public class Program {
 		
 		Conta conta = new Conta(accNumber, accHolder, initialDepositValue);
 		
-		System.out.println("Holder: " + conta.getAccHolder() + ", Acc: "+ conta.getAccNumber() + ",  Balance: R$" + conta.getTotalValue());
+		System.out.println(conta);
 		
 		System.out.println("Enter a deposit value: ");
 		initialDepositValue = sc.nextDouble();
 		conta.deposito(initialDepositValue);
 		
-		System.out.println("Holder: " + conta.getAccHolder() + ", Acc: "+ conta.getAccNumber() + ",  Balance: R$" + conta.getTotalValue());
-
+		System.out.println(conta);
 		
 		System.out.println("Enter a withdraw value: ");
 		initialDepositValue = sc.nextDouble();
 		conta.saque(initialDepositValue);
 		
-		System.out.println("Holder: " + conta.getAccHolder() + ", Acc: "+ conta.getAccNumber() + ",  Balance: R$" + conta.getTotalValue());
+		System.out.println(conta);
 				
 		sc.close();
 	}
