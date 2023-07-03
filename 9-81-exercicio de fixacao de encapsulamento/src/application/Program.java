@@ -7,7 +7,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		double initialDepositValue = 0;
+		double depositoOuRetirada = 0;
 		char initialDepositPermission;
 		String accHolder;
 		int accNumber;
@@ -20,22 +20,22 @@ public class Program {
 		initialDepositPermission = sc.next().charAt(0);
 		if(initialDepositPermission == 'Y') {
 			System.out.println("Enter initial deposit value: ");
-			initialDepositValue = sc.nextDouble();
+			depositoOuRetirada = sc.nextDouble();
 		}
 		
-		Conta conta = new Conta(accNumber, accHolder, initialDepositValue);
+		Conta conta = new Conta(accNumber, accHolder, depositoOuRetirada);
 		
 		System.out.println(conta);
 		
 		System.out.println("Enter a deposit value: ");
-		initialDepositValue = sc.nextDouble();
-		conta.deposito(initialDepositValue);
+		depositoOuRetirada = sc.nextDouble();
+		conta.deposito(depositoOuRetirada);
 		
 		System.out.println(conta);
 		
 		System.out.println("Enter a withdraw value: ");
-		initialDepositValue = sc.nextDouble();
-		conta.saque(initialDepositValue);
+		depositoOuRetirada = sc.nextDouble();
+		conta.saque(depositoOuRetirada);
 		
 		System.out.println(conta);
 				
